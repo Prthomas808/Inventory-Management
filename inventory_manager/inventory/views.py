@@ -15,7 +15,7 @@ def add_to_inventory(request):
         form = InventoryForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('all_inventory')
+            return redirect('inventory-home')
     else:
         form = InventoryForm()
 
