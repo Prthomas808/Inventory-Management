@@ -8,7 +8,6 @@ from .forms import ProductForm
 def index(request):
     return render(request, 'index.html')
 
-
 # Create Product
 def create_product(request):
     form = ProductForm
