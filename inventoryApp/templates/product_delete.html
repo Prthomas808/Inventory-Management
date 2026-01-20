@@ -3,11 +3,16 @@
 {% block title %}Delete Product - Inventory Manager{% endblock %}
 
 {% block content %}
-    <h1>Delete Item</h1>
-    <h3>Are you sure you want to delete the product</h3>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Yes</button>
-        <a href="{% url 'product_list' %}"><button>Cancel</button></a>
-    </form>
+    <div class="flex flex-col justiffy-content items-center space-y-5">
+        <h1 class="text-3xl font-mono pt-5">Delete Item</h1>
+        <h3 class="text-xl font-black">Are you sure you want to delete the product</h3>
+        <form method="post">
+            {% csrf_token %}
+            <div class="space-x-10">
+                <button type="submit" class="px-10 py-2 bg-red-600 text-white rounded-xl">Yes</button>
+
+                <a href="{% url 'product_list' %}" class="px-10 py-2 bg-purple-400 text-white rounded-xl">Cancel</a>
+            </div>
+        </form>
+    </div>
 {% endblock %}

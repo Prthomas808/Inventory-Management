@@ -3,8 +3,14 @@
 {% block title %}Inventory Manager{% endblock %}
 
 {% block content %}
-    <h1>Inventory Manager</h1>
-    <h3>Streamline and optimize your product management</h3>
+<div class="flex flex-col justify-content items-center">
+    <h1 class="text-5xl font-mono pt-3">Inventory Manager</h1>
+    
+    <p class="text-xl text-center pt-5">Streamline and optimize your product management</p>
     <hr>
-    <a href="{% url 'product_list' %}"><button>View All Products</button></a>
+    <a class="pt-5" href="{% url 'product_list' %}">
+        <button class="bg-pink-200 h-15 w-50 p-5 rounded-3xl hover:bg-pink-300">View All Products</button>
+    </a>
+</div>
+   
 {% endblock %}

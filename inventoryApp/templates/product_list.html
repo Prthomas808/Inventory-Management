@@ -1,36 +1,48 @@
-{% extends 'base.html' %}
-
-{% block title %}Inventory Manager{% endblock %}
+{% extends 'base.html' %} {% block title %}Inventory Manager{% endblock %} 
 
 {% block content %}
-    <h1>Products</h1>
-    
-    <a href="{% url 'create_product' %}"><button type="submit">Add Item</button></a>
-    <a href="{% url 'home' %}"><button type="submit">Exit System</button></a>
-<hr>
-    <table>
-        <thead>
-            <tr>Name</tr>
-            <tr>SKU</tr>
-            <tr>Price</tr>
-            <tr>Quantity</tr>
-            <tr>Delete</tr>
-        </thead>
-        <tbody>
+    <h1 class="text-5xl p-3 font-mono">Products</h1>
+
+    <div class=pb-5>
+        <a href="{% url 'create_product' %}">
+            <button type="submit" class="px-3 py-1 text-sm text-white bg-cyan-500 rounded hover:bg-cyan-600">Add Item</button>
+        </a>
+
+        <a href="{% url 'home' %}">
+            <button type="submit" class="px-3 py-1 text-sm text-white bg-violet-500 rounded hover:bg-violet-600">Exit System</button>
+        </a>
+    </div>
+
+    <table class="min-w-full border border-gray-500 rounded-lg overflow-hidden">
+        <thead class="bg-gray-200">
+            <tr>
+                <th class="px-4 py-2 text-left border-b">Name</th>
+                <th class="px-4 py-2 text-left border-b">SKU</th>
+                <th class="px-4 py-2 text-left border-b">Price</th>
+                <th class="px-4 py-2 text-left border-b">Quantity</th>
+                <th class="px-4 py-2 text-left border-b">Actions</th>
+            </tr>
+        </thead>    
+
+        <tbody class="divide-y">
             {% for product in products %}
-                <tr>
-                    <td>{{product.product_name}}</td>
-                    <td>{{product.product_quantity}}</td>
-                    <td>${{product.product_price}}</td>
-                    <td>{{product.product_sku}}</td>
-                    <td>
-                        
-                        <a href="{% url 'create_product' %}"><button>Update</button></a>
-                        <a href="{% url 'delete_product' product.id %}"><button>Delete</button></a>
+                <tr class="hover:bg-gray-50">
+                    <td class="px-4 py-2">{{ product.product_name }}</td>
+                    <td class="px-4 py-2">{{ product.product_sku }}</td>
+                    <td class="px-4 py-2">${{ product.product_price }}</td>
+                    <td class="px-4 py-2">{{ product.product_quantity }}</td>
+                    <td class="px-4 py-2 space-x-2">
+                        <!-- <a href="{% url 'create_product' %}">
+                            <button class="px-3 py-1 text-sm text-white bg-teal-100 rounded hover:bg-teal-200">🔄</button>
+                        </a>   -->
+
+                        <a href="{% url 'delete_product' product.id %}">
+                            <button class="px-3 py-1 text-sm text-white bg-red-200 rounded hover:bg-red-200">🗑️</button>
+                        </a>
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    
+
 {% endblock %}
