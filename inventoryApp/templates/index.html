@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Inventory Manager{% endblock %}
+
+{% block content %}
+    <h1>Inventory Manager</h1>
+    <h3>Streamline and optimize your product management</h3>
+    <hr>
+    <a href="{% url 'product_list' %}"><button>View All Products</button></a>
+{% endblock %}

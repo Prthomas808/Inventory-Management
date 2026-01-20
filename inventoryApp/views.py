@@ -19,7 +19,7 @@ def create_product(request):
     else:
         form = ProductForm()
 
-    render(request, 'product_form.html', {'form' : form})
+    return render(request, 'product_form.html', {'form' : form})
 
 # Product List
 def list_product(request):
@@ -47,4 +47,4 @@ def delete_product(request, id):
         product.delete()
         return redirect('product_list')
     
-    return render(request, 'product_delete', {'product' : product})
+    return render(request, 'product_delete.html', {'product' : product})
