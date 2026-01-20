@@ -1,9 +1,10 @@
-Inventory Management Application
-📦 Overview
+# Inventory Management Application
 
-The Inventory Management Application is designed to help businesses efficiently track, manage, and organize inventory in real time. It provides tools to monitor stock levels, manage products, record transactions, and generate reports—reducing errors and improving operational efficiency.
+## 📦 Overview
 
-✨ Features
+-- The Inventory Management Application is designed to help businesses efficiently track, manage, and organize inventory in real time. It provides tools to monitor stock levels, manage products, record transactions, and generate reports—reducing errors and improving operational efficiency.
+
+## ✨ Features
 
 📋 Product management (add, update, delete items)
 
