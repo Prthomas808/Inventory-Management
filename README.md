@@ -18,3 +18,11 @@ Update products (form reuse is supported).
 Simple UI: Built with Tailwind CSS for clean, responsive design.
 
 Default Database: Uses SQLite (Django default).
+
+# Technologies Used
+
+Backend: Python, Django 5.2.6
+
+Frontend: HTML, Tailwind CSS
+
+Database: SQLite (default Django database)
