@@ -19,6 +19,17 @@ Simple UI: Built with Tailwind CSS for clean, responsive design.
 
 Default Database: Uses SQLite (Django default).
 
+Setup & Installation 
+- Clone the repository
+  - git clone https://github.com/Prthomas808/Inventory-Management
+
+- Create and activate a virtual environment
+  - python -m venv venv
+  - source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+- Start the development server
+  - python3 manage.py runserver
+
 # Technologies Used
 
 Backend: Python, Django 5.2.6
