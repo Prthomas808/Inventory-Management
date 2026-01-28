@@ -24,8 +24,8 @@ Setup & Installation
   - git clone https://github.com/Prthomas808/Inventory-Management
 
 - Create and activate a virtual environment
-  - python -m venv venv
-  - source venv/bin/activate  # On Windows: venv\Scripts\activate
+  - python3 -m venv venv
+  - source venv/bin/activate  (On Windows: venv\Scripts\activate)
 
 - Start the development server
   - python3 manage.py runserver
